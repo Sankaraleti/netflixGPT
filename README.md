@@ -1,3 +1,16 @@
+- create react app
+- configured tailwindCSS
+- Header
+- Routing App
+- Login form
+- sign Up form
+- useRef hook
+- Firebase Setup
+- Implement sign/sign out in user apis
+- create redux store with useSlice
+- implemented signout
+- update profile
+
 # Features
 
 - Login/ signup
