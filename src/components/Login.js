@@ -10,6 +10,7 @@ import { auth } from "../utils/firebase";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
+import { NETFLIX_LOGO } from "../utils/constants";
 const Login = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -91,11 +92,7 @@ const Login = () => {
     <div>
       <Header />
       <div>
-        <img
-          className="absolute"
-          src="https://assets.nflxext.com/ffe/siteui/vlv3/2e07bc25-8b8f-4531-8e1f-7e5e33938793/e4b3c14a-684b-4fc4-b14f-2b486a4e9f4e/IN-en-20240219-popsignuptwoweeks-perspective_alpha_website_large.jpg"
-          alt=""
-        />
+        <img className="absolute" src={NETFLIX_LOGO} alt="" />
       </div>
       {/* <div className="flex justify-center items-center h-96 text-white"> */}
       <form
@@ -129,21 +126,6 @@ const Login = () => {
         <button className="p-4 my-6 bg-red-800 w-full rounded-lg" type="submit">
           {signInForm ? "Sign In" : "Sign Up"}
         </button>
-        {/* {signInForm ? (
-          <button
-            className="p-4 my-6 bg-red-800 w-full rounded-lg"
-            type="submit"
-          >
-            Sign In{" "}
-          </button>
-        ) : (
-          <button
-            className="p-4 my-6 bg-red-800 w-full rounded-lg"
-            type="submit"
-          >
-            Sign Up
-          </button>
-        )} */}
         {signInForm ? (
           <p className="text-gray-400">
             New to Netflix ?{" "}
@@ -166,7 +148,6 @@ const Login = () => {
           </p>
         )}
       </form>
-      {/* </div> */}
     </div>
   );
 };
